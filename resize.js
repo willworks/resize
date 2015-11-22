@@ -1,7 +1,8 @@
 $(window).resize(function(){
     var win_w = $(window).width();
-    console.log(win_w);
+    // 设计稿宽度
     var psd_w = 750;
+    // 页面宽度极值
     var max_w = 640;
     var min_w = 320;
     var w = win_w;
@@ -13,6 +14,7 @@ $(window).resize(function(){
             w = max_w;
         }
     }
+    // rem处理页面字体自适应
     $("html").css("font-size", w/psd_w*100+"px");
     $("body").css("font-size", "16.1px");
 }).resize();
